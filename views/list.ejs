@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo list</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="box" id='heading'>
+		<h1><%=DayList %></h1>
+	</div>
+
+	<div class='box'>
+
+  	<% for(var i=0; i<newListItems.length; i++){ %>
+  		<div class='item'>
+  		  <input type='checkbox'>
+			<p><%= newListItems[i] %></p>
+		</div>
+	<% } %>
+          
+    <form action="/" method= "post" class="item">
+    	<input type='text' name='newItem' autocomplete='off' placeholder="New Item">
+    	<button value='submit' name=button>+</button>
+    </form>
+          
+	</div>
+
+</body>
+</html>
